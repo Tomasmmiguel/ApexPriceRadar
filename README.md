@@ -1,4 +1,4 @@
-# 🚀 ApexPrice Radar & Engine: Automação, Scraping & Inteligência de Preços
+# ApexPrice Radar & Engine: Automação, Scraping & Inteligência de Preços
 
 ![ApexPriceRadar Logo](assets/logos/apexprice-radar-logo.svg)
 
