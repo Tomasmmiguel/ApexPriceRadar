@@ -428,7 +428,7 @@ class ApexPriceDesktopApp(ctk.CTk):
 
         new_items: list[dict[str, str | float]] = []
         for item in products:
-            raw_name = str(item.name or "").strip()
+            raw_name = (item.name or "").strip()
             if not raw_name or raw_name.lower() in ("none", "sem nome"):
                 raw_name = f"Produto {item.retailer.value} ({item.sku})"
 
@@ -437,7 +437,7 @@ class ApexPriceDesktopApp(ctk.CTk):
                 "sku": item.sku,
                 "name": raw_name,
                 "price": float(item.price),
-                "url": str(item.url),
+                "url": item.url,
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             }
 
