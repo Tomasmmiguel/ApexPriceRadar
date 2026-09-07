@@ -1,0 +1,38 @@
+name: CI Quality & Testing Pipeline
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  quality-check:
+    name: Lint, Typecheck & Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install uv Package Manager
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync Dependencies & Extras
+        run: uv sync --all-extras
+
+      - name: Code Quality & Linting (Ruff)
+        run: uv run ruff check .
+
+      - name: Static Type Checking (Mypy)
+        run: uv run mypy config models database pipelines scrapers notifications
+
+      - name: Run Test Suite with Coverage
+        run: uv run pytest -v --cov=. --cov-report=term-missing

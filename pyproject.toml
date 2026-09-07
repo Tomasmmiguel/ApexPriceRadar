@@ -1,0 +1,58 @@
+[project]
+name = "apex-price-engine"
+version = "1.0.0"
+description = "Production-Grade Price Intelligence & Web Scraping Automation Engine"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Data & Software Engineering Portfolio", email = "engineer@example.com" }
+]
+dependencies = [
+    "httpx[http2]>=0.28.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.6.0",
+    "sqlalchemy>=2.0.36",
+    "aiosqlite>=0.20.0",
+    "pandas>=2.2.3",
+    "openpyxl>=3.1.5",
+    "tenacity>=9.0.0",
+    "fake-useragent>=1.5.1",
+    "beautifulsoup4>=4.12.3",
+    "python-dotenv>=1.0.1",
+    "customtkinter>=6.0.0",
+    "pillow>=12.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "respx>=0.22.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.22.2",
+]

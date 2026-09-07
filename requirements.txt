@@ -1,0 +1,30 @@
+# ApexPrice Radar - Dependências de Produção
+# Instalar com: pip install -r requirements.txt
+
+# Requisições HTTP e Conectividade
+httpx[http2]>=0.28.0
+
+# Contratos de Dados e Definições de Ambiente
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.1
+
+# Persistência Relacional e Base de Dados Assíncrona
+sqlalchemy>=2.0.36
+aiosqlite>=0.20.0
+
+# Análise de Dados e Relatórios
+pandas>=2.2.3
+openpyxl>=3.1.5
+
+# Web Scraping Resiliente e Anti-Bloqueio
+beautifulsoup4>=4.12.3
+fake-useragent>=1.5.1
+tenacity>=9.0.0
+
+# Interface Gráfica Desktop Moderna & Imagens
+customtkinter>=6.0.0
+pillow>=11.0.0
+
+# Empacotamento para Executável (.exe)
+pyinstaller>=6.11.0
