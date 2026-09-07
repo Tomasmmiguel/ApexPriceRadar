@@ -1,6 +1,6 @@
 # 🚀 ApexPrice Radar & Engine: Automação, Scraping & Inteligência de Preços
 
-![ApexPriceRadar Logo](assets/logos/app_icon.png)
+![ApexPriceRadar Logo](assets/logos/apexprice-radar-logo.svg)
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Package Manager: uv](https://img.shields.io/badge/package%20manager-uv-8A2BE2.svg?logo=astral&logoColor=white)](https://astral.sh/uv)
