@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160">
   <!-- ============ ÍCONE ============ -->
-  <!-- "Apex" (pico) formado por duas linhas em V invertido em branco -->
+  <!-- "Apex" (pico) formado por duas linhas em V invertido para fundos claros -->
   <polyline points="26,118 78,42 130,118"
-            fill="none" stroke="#FFFFFF" stroke-width="9"
+            fill="none" stroke="#1B1D23" stroke-width="9"
             stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Ondas de radar emanando do pico -->
@@ -18,7 +18,7 @@
   <text x="168" y="80"
         font-family="Helvetica Neue, Arial, sans-serif"
         font-size="40" font-weight="700" letter-spacing="0.5"
-        fill="#FFFFFF">ApexPrice</text>
+        fill="#1B1D23">ApexPrice</text>
 
   <text x="168" y="112"
         font-family="Helvetica Neue, Arial, sans-serif"
